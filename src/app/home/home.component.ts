@@ -1,4 +1,4 @@
-import { Component , OnInit} from '@angular/core';
+import { Component , OnInit , Input } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Import FormsModule for binding both ways 
 
 
@@ -10,12 +10,14 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule for binding 
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit{
-
-  username: string= "";
-  password: string = "";
+// both ways data binding 
   mytitle: string = "welcome to my homepage...";
   AlerteMe(){
-    alert(`hello there, Username: ${this.username}, Password: ${this.password}`);
+    alert(`hello there, Username: ${this.ninja.name}, Password: ${this.ninja.password}`);
+  }
+  ninja = {
+    name: "ahmed",
+    password : "password"
   }
 
   constructor(){
@@ -24,5 +26,8 @@ export class HomeComponent implements OnInit{
   ngOnInit(): void {
       
   }
+
+  //custom properties input use
+  @Input() person: any;
 
 }

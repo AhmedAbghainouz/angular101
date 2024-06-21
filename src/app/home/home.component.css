@@ -1,5 +1,39 @@
-.form1{
+form{
     display: flex;
     flex-direction: column;
-    
+    width: 80%;
+}
+form input{
+    margin: 10px;
+    width: 120px;
+    padding: 4px;
+    background-color: rgb(192, 99, 99);
+
+}
+form button{
+    border-radius: 5px;
+    margin: 5px;
+    padding: 4px;
+    width: 120px;
+    background-color: rgb(77, 101, 88);
+    color: rgb(255, 255, 255);
+}
+.forms{
+    display: flex;
+    justify-content: space-between;
+
+}
+.right-form{
+    border: 1px solid rgb(171, 32, 32);
+    padding: 10px;
+    flex: 0.3;
+    margin-right: 5px;
+    align-items: center;
+}
+.left-form{
+    border: 1px solid rgb(171, 32, 32); 
+    padding: 10px;
+    flex: 0.3;
+    margin-left: 5px;
+    align-items: center;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms'; // Import FormsModule for bindin both ways 
@@ -11,5 +11,11 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule for bindin b
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'youssef';
+  title = 'Welcome To My First Angular Project';
+
+  
+  person = {
+    name: "Skies",
+    age: 23
+  };
 }

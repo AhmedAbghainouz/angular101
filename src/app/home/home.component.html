@@ -1,6 +1,22 @@
-<h1>{{mytitle}}</h1>
-<form class="form1">
-    username :<input [(ngModel)]="username" name="username">
-    password :<input [(ngModel)]="password" name="password">
-    <button (click)="AlerteMe()">submit</button>
-</form>
+<div class="forms">
+    <form class="left-form">
+        <h3 style="border: 1px solid rgb(171, 32, 32); padding: 10px;border-radius: 5px;text-align: center;">both ways binding essays</h3>
+        username :<input [(ngModel)]="ninja.name" name="username">
+        password :<input [(ngModel)]="ninja.password" name="password">
+        <button (click)="AlerteMe()">show alert</button> <!-- "(click)"event binding -->
+        <h2>
+            this is your values : <br>
+            {{ninja.name}} <br>
+            {{ninja.password}} <br>
+        </h2>
+    </form>
+    <form class="right-form">
+        <h3 style="border: 1px solid rgb(171, 32, 32); padding: 10px;border-radius: 5px;text-align: center;">custom property binding</h3>
+        <h4>data imported from app component :<br></h4>
+        <h4>name = {{person.name}} <br>
+            age = {{person.age}}</h4>
+        
+    </form>
+</div>
+
+
