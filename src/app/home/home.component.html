@@ -1,3 +1,19 @@
+<header>
+    <nav>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      </nav>
+      <div class="titlediv">
+          <h1>{{mytitle}}</h1>
+      </div>
+      
+</header>
 <div class="forms">
     <form class="left-form">
         <h3 style="border: 1px solid rgb(171, 32, 32); padding: 10px;border-radius: 5px;text-align: center;">both ways binding essays</h3>
@@ -11,11 +27,16 @@
         </h2>
     </form>
     <form class="right-form">
-        <h3 style="border: 1px solid rgb(171, 32, 32); padding: 10px;border-radius: 5px;text-align: center;">custom property binding</h3>
+        <h3 style="border: 1px solid rgb(171, 32, 32); padding: 10px;border-radius: 5px;text-align: center;">custom property binding (input/>output)</h3>
         <h4>data imported from app component :<br></h4>
         <h4>name = {{person.name}} <br>
-            age = {{person.age}}</h4>
-        
+            age = {{person.age}}
+        </h4> 
+
+        <h4>data imported from app component :<br></h4>
+
+        <button (click)="Fireyellevent($event)">click me</button>   
+        <!--the button calls the fireyellevent that emits a new event in the root component and callls the yell function -->
     </form>
 </div>
 

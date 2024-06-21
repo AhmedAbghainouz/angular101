@@ -1,4 +1,4 @@
-import { Component , OnInit , Input } from '@angular/core';
+import { Component , OnInit , Input , Output , EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Import FormsModule for binding both ways 
 
 
@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule for binding 
 })
 export class HomeComponent implements OnInit{
 // both ways data binding 
-  mytitle: string = "welcome to my homepage...";
+  mytitle: string = "Welcome To My First Angular Project";
   AlerteMe(){
     alert(`hello there, Username: ${this.ninja.name}, Password: ${this.ninja.password}`);
   }
@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit{
     password : "password"
   }
 
+
   constructor(){
 
   }
@@ -27,7 +28,14 @@ export class HomeComponent implements OnInit{
       
   }
 
-  //custom properties input use
+
+
+  //custom properties input/output use:
   @Input() person: any;
+  @Output() Onyell = new EventEmitter();  //new instance of an event emitter
+
+  Fireyellevent(e: any){
+    this.Onyell.emit(e);  //this emits a new event 
+  }
 
 }

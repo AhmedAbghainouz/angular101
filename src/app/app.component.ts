@@ -10,12 +10,14 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule for bindin b
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'Welcome To My First Angular Project';
 
-  
+export class AppComponent {
   person = {
     name: "Skies",
     age: 23
   };
+
+  yell(e:any){
+    alert("I am yelling !");
+  }
 }
