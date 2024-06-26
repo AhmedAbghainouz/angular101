@@ -10,16 +10,6 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule for binding 
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit{
-// both ways data binding 
-  mytitle: string = "Welcome To My First Angular Project";
-  AlerteMe(){
-    alert(`hello there, Username: ${this.ninja.name}, Password: ${this.ninja.password}`);
-  }
-  ninja = {
-    name: "ahmed",
-    password : "password"
-  }
-
 
   constructor(){
 
@@ -28,6 +18,16 @@ export class HomeComponent implements OnInit{
       
   }
 
+  // both ways data binding 
+
+  mytitle: string = "Welcome To My First Angular Project";
+  AlerteMe(){
+    alert(`hello there, Username: ${this.ninja.name}, Password: ${this.ninja.password}`);
+  }
+  ninja = {
+    name: "ahmed",
+    password : "password"
+  }
 
 
   //custom properties input/output use:

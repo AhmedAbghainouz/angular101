@@ -1,0 +1,11 @@
+.clock {
+    font-family: Arial, sans-serif;  
+    text-align: center;  
+    margin: 20px;  
+  }
+  
+  .clock p {
+    margin: 0;  
+    font-size: 2em;  
+  }
+  

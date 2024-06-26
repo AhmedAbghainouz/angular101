@@ -1,5 +1,16 @@
 
 <section id="main">
-  <app-home [person]="person" (Onyell)="yell($event)"></app-home>
-</section>
+  <!--<app-home [person]="person" (Onyell)="yell($event)"></!--<app-home>
+  <app-clock-app></app-clock-app>-->
+
+  <nav>
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
+      <li><a routerLink="/clock-app" routerLinkActive="active" ariaCurrentWhenActive="page">Clock</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+  </section>
   

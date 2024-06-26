@@ -21,3 +21,42 @@ body {
     pointer-events: none; /* Ensures the pseudo-element does not interfere with any content */
     z-index: -1; /* Ensures it is behind other content */
   }
+
+
+  /*nav style */
+  body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px; 
+  }
+  
+  nav ul li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #b64b4b;
+    color: black;
+  }

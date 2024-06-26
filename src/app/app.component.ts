@@ -1,12 +1,13 @@
 import { Component , Input } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms'; // Import FormsModule for bindin both ways 
+import {ClockAppComponent} from './clock-app/clock-app.component' ;
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet , HomeComponent , FormsModule],
+  imports: [RouterOutlet , HomeComponent , FormsModule , ClockAppComponent ,RouterLinkActive , RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
