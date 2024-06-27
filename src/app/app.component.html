@@ -1,16 +1,24 @@
-
-<section id="main">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <section id="main">
   <!--<app-home [person]="person" (Onyell)="yell($event)"></!--<app-home>
   <app-clock-app></app-clock-app>-->
 
   <nav>
     <ul>
-      <li><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
-      <li><a routerLink="/clock-app" routerLinkActive="active" ariaCurrentWhenActive="page">Clock</a></li>
-      <li><a href="#">Services</a></li>
+      <li><a [routerLink]="['/home']" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
+      <li><a [routerLink]="['/clock-app']" routerLinkActive="active" ariaCurrentWhenActive="page">Clock</a></li>
+      <li><a [routerLink]="['/directives']">directives</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
   <router-outlet></router-outlet>
   </section>
   
+  </body>
+</html>

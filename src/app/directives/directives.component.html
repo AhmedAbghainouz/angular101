@@ -1,0 +1,39 @@
+<section style="padding: 5px; display: flex; justify-content: space-around; width: fit-content; flex-direction: column; text-decoration: none;">
+    <h1 style="text-align: center; background-color: rgb(171, 32, 32); margin-bottom: 0px;">ngClass - ngIf</h1>
+    <section style="border: 3px solid rgb(171, 32, 32); padding: 10px;">
+      <p [ngClass]="classes">directives works!</p>
+      <p *ngIf="classes.green">shows if "directives works!" is green</p>
+      <p *ngIf="classes.red">shows if "directives works!" is red</p>
+      <p *ngIf="classes.underline">shows if "directives works!" is underlined</p>
+    </section>
+  </section>
+  
+  <style>
+    .green {
+      color: rgb(0, 254, 174);
+    }
+    .red {
+      color: red;
+    }
+    .underline {
+      text-decoration: underline;
+    }
+  </style>
+  
+
+  <section style="padding: 5px; display: flex; justify-content: space-around; width: fit-content; flex-direction: column; text-decoration: none;">
+    <h1 style="text-align: center; background-color: rgb(171, 32, 32); margin-bottom: 0px;">ngFor</h1>
+    <section style="border: 3px solid rgb(171, 32, 32); padding: 10px;">
+      <form style="background-color: gray;">
+        <label>filter by name</label>
+        <input [(ngModel)]="term"  name ="term" placeholder="Search by name"> 
+      </form>
+      <ul>
+        <li *ngFor="let person of people | filter:term" style="list-style: none;">
+          <div>name: {{person.name}}</div>
+          <div>age: {{person.age}}</div>
+        </li>
+      </ul>
+    </section>
+  </section>
+  

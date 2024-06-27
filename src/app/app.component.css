@@ -1,0 +1,12 @@
+.content-container {
+    height: 100%;
+    overflow: auto;
+  }
+  html, body {
+    height: 100%;
+    overflow: auto; /* Ensures that scrolling is allowed */
+  }
+  .parent-element {
+    overflow: visible; /* Ensure it doesn't hide overflow content */
+  }
+      
