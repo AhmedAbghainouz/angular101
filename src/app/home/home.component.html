@@ -19,15 +19,17 @@
     <form class="right-form">
         <h3 style="border: 1px solid rgb(171, 32, 32); padding: 10px;border-radius: 5px;text-align: center;">custom property binding (input/>output)</h3>
         <h4>data imported from app component to home component:<br></h4>
-        <h4>name = {{person.name}} <br>
-            age = {{person.age}}
+        <h4>name = {{ninja.name}} <br>
+            age = {{ninja.password}}
         </h4> 
 
         <h4>data exported from home component to app component :<br></h4>
 
         <button (click)="Fireyellevent($event)">click me</button>   
         <!--the button calls the fireyellevent that emits a new event in the root component and callls the yell function -->
+
     </form>
 </div>
+<button (click)="logIt()"> Log me </button>
 
 

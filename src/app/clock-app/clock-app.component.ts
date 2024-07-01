@@ -1,6 +1,6 @@
 import { Component , OnInit , OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';  
-
+import { LoggingService } from '../logging.service';
 @Component({
   selector: 'app-clock-app',
   standalone: true,
@@ -9,6 +9,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './clock-app.component.css'
 })
 export class ClockAppComponent implements OnInit , OnDestroy{
+pagename = "Clock-App" ; 
+constructor( private logger: LoggingService) { }
+
+  logIt() { 
+    this.logger.log(this.pagename) ; 
+  }
+
+
   currentTime: Date = new Date();  // Variable to hold the current date and time
   private timer: any;  // Variable to store the interval timer
 

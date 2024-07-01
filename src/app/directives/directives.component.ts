@@ -2,15 +2,22 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
+import { LoggingService } from '../logging.service';
 
 @Component({
   selector: 'app-directives',
   standalone: true,
   imports: [CommonModule, FormsModule , FilterPipe ],
   templateUrl: './directives.component.html',
-  styleUrls: ['./directives.component.css'], // Corrected property name
+  styleUrls: ['./directives.component.css'], 
 })
 export class DirectivesComponent {
+  constructor( private logger: LoggingService) { }
+
+   ngOnInit() {
+  }
+pagename = "Directives" ; 
+
   classes = {
     green: true,
     red: false,
@@ -27,11 +34,12 @@ export class DirectivesComponent {
     { name: 'simo', age: 20 },
     { name: 'yassin', age: 19 },
   ];
-  constructor() { }
-
-  ngOnInit() {
-
-  }
+  
    term = '' ;
 
+
+  logIt() { 
+    this.logger.log(this.pagename) ; 
+  }
+ 
 }

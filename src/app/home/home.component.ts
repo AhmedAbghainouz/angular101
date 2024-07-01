@@ -1,5 +1,6 @@
 import { Component , OnInit , Input , Output , EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Import FormsModule for binding both ways 
+import { LoggingService } from '../logging.service';
 
 
 @Component({
@@ -10,9 +11,12 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule for binding 
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit{
+  pagename = "Home" ; 
+  constructor(private logger:LoggingService){
 
-  constructor(){
-
+  }
+  logIt() { 
+    this.logger.log(this.pagename) ; 
   }
   ngOnInit(): void {
       
